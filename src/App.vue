@@ -1,16 +1,16 @@
-<script setup lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
-// import TheWelcome from './components/TheWelcome.vue'
-import Login from './components/Login.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <main>
-    <Login />
-  </main>
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
 
 <style scoped>
+#app {
+  width: 100%;
+  height: 100%;
+}
 header {
   line-height: 1.5;
 }
