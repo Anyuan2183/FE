@@ -1,16 +1,32 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import Layout from '../views/Layout/Layout.vue'
-import Login from '../views/Login/Login.vue'
+// import Login from '../views/Login/Login.vue'
+import About from '../views/About/About.vue'
+import Home from '../views/Home/Home.vue'
 
 // 定义路由规则
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: Layout,
-  },
-  { path: '/login', name: 'login', component: Login },
+  // {
+  //   path: '/',
+  //   name: 'home',
+  //   component: Layout,
+  // },
+  // { path: '/login', name: 'login', component: Login },
+    {
+      path: '/',
+      component: Layout, // 父组件
+      children: [
+        {
+          path: '', // 默认子路由
+          component: Home,
+        },
+        {
+          path: 'about', // 子路由
+          component: About,
+        },
+      ],
+    },
 ]
 
 // 创建路由实例
